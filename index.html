@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hexa Demo Game | AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Anton SC', sans-serif;
+        }
+        canvas {
+            display: block;
+        }
+        * {
+            font-family: 'Anton SC', sans-serif !important;
+        }
+        #ui-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            color: #1b2727;
+            text-shadow: 0 0 10px rgba(243, 243, 243, 0.5);
+        }
+        #game-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        #score {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #1b2727;
+            font-size: 24px;
+        }
+        #debug {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #1b2727;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ui-container">
+        <div id="game-title">HEXA GAME DEMO</div>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="debug">Player Position: (0, 0, 0)</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/ColorCorrectionShader.js"></script>
+    <script src="shaders.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
